@@ -17,7 +17,7 @@ pipeline {
                    // This step should not normally be used in your script. Consult the inline help for details.
                    withDockerRegistry(credentialsId: 'docker-hub-push-credentials', toolName: 'docker') {
                    // some block
-                   def image = docker.build("kanishkajain30/hello-world:$BUILD_NUMBER")
+                   def image = docker.build("sudh1111/hello-world:$BUILD_NUMBER")
                    image.push()
                    }
                }
